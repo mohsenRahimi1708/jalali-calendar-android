@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jalali Calendar</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="reminder">Reminder</string>
+    <string name="notif_channel_name">Event reminders</string>
+    <string name="notif_channel_desc">Alerts before your events start</string>
+</resources>

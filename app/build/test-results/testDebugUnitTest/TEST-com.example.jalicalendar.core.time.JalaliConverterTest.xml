@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.jalicalendar.core.time.JalaliConverterTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-12T03:01:26" hostname="freestyle-vm" time="0.699">
+  <properties/>
+  <testcase name="leap years follow the 33-year cycle" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.126"/>
+  <testcase name="every day of dense years round-trips and advances by exactly one day" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.181"/>
+  <testcase name="matches jdatetime reference table in both directions" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.28"/>
+  <testcase name="documented anchor dates convert correctly" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.002"/>
+  <testcase name="invalid dates are rejected" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.018"/>
+  <testcase name="jalali date helpers work" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.082"/>
+  <testcase name="month lengths are 31-31-31-31-31-31-30-30-30-30-30-x" classname="com.example.jalicalendar.core.time.JalaliConverterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

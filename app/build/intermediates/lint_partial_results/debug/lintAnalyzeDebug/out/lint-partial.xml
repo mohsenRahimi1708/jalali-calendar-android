@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.3" type="partial_results">
+    <map id="NotificationPermission">
+        <entry
+            name="source"
+            boolean="true"/>
+    </map>
+    <map id="ScheduleExactAlarm">
+        <location id="0"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/jalicalendar/reminders/ReminderScheduler.kt"
+            line="39"
+            column="17"
+            startOffset="1666"
+            endLine="39"
+            endColumn="100"
+            endOffset="1749"/>
+        <location id="1"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/jalicalendar/reminders/ReminderScheduler.kt"
+            line="60"
+            column="17"
+            startOffset="2604"
+            endLine="60"
+            endColumn="100"
+            endOffset="2687"/>
+        <entry
+            name="ChecksExactAlarmPermission"
+            boolean="true"/>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.jalicalendar.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="color[ic_launcher_background(U),splash_background(U)],drawable[ic_launcher_foreground(U),ic_notification(U)],font[vazirmatn_regular(R),vazirmatn_medium(R),vazirmatn_semibold(R),vazirmatn_bold(R)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),today(U),tomorrow(U),reminder(U),notif_channel_name(U),notif_channel_desc(U)],style[Theme_JalaliCalendar(U),Theme_SplashScreen(R),Theme_JalaliCalendar_Main(U)],xml[data_extraction_rules(U),backup_rules(U)];8^0^2,9^0^2,10^11^1^2^12;;;"/>
+    </map>
+
+</incidents>

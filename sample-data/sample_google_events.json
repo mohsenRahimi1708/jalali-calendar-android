@@ -1,0 +1,50 @@
+{
+  "_comment": "Shape returned by GET /calendars/{id}/events. Use with MockWebServer (see SyncEngineTest).",
+  "kind": "calendar#events",
+  "summary": "Work",
+  "nextSyncToken": "NEXT_SYNC_TOKEN_EXAMPLE",
+  "items": [
+    {
+      "id": "ev_nowruz_1405",
+      "etag": "\"pna3y\"",
+      "status": "confirmed",
+      "summary": "Nowruz 1405",
+      "description": "Jalali New Year.",
+      "start": { "date": "2026-03-21" },
+      "end": { "date": "2026-03-22" },
+      "transparency": "transparent",
+      "updated": "2026-03-01T12:00:00Z"
+    },
+    {
+      "id": "ev_standup",
+      "etag": "\"pna3z\"",
+      "status": "confirmed",
+      "summary": "Daily standup",
+      "location": "Team room",
+      "start": { "dateTime": "2026-03-21T09:00:00Z", "timeZone": "Asia/Tehran" },
+      "end": { "dateTime": "2026-03-21T09:30:00Z", "timeZone": "Asia/Tehran" },
+      "recurrence": [ "RRULE:FREQ=WEEKLY;BYDAY=SA,SU,MO,TU,WE,TH,FR;COUNT=10" ],
+      "updated": "2026-03-01T12:00:00Z"
+    },
+    {
+      "id": "ev_birthday",
+      "etag": "\"pna4a\"",
+      "status": "confirmed",
+      "summary": "Sara's birthday",
+      "start": { "date": "2026-04-01" },
+      "end": { "date": "2026-04-02" },
+      "recurrence": [ "RRULE:FREQ=YEARLY" ],
+      "transparency": "transparent",
+      "updated": "2026-03-01T12:00:00Z"
+    },
+    {
+      "id": "ev_cancelled",
+      "etag": "\"pna4b\"",
+      "status": "cancelled",
+      "summary": "Old meeting",
+      "start": { "dateTime": "2026-03-10T10:00:00Z" },
+      "end": { "dateTime": "2026-03-10T11:00:00Z" },
+      "updated": "2026-03-02T08:00:00Z"
+    }
+  ]
+}

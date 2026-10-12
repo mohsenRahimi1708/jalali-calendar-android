@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.jalicalendar.sync.SyncEngineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-12T03:01:27" hostname="freestyle-vm" time="8.031">
+  <properties/>
+  <testcase name="LWW keeps the newer local copy and pushes it instead of overwriting" classname="com.example.jalicalendar.sync.SyncEngineTest" time="7.501"/>
+  <testcase name="full pull stores events and advances the sync token" classname="com.example.jalicalendar.sync.SyncEngineTest" time="0.291"/>
+  <testcase name="incremental 410 Gone falls back to a full resync" classname="com.example.jalicalendar.sync.SyncEngineTest" time="0.239"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

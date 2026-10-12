@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#006750</color>
+    <color name="splash_background">#006750</color>
+    <string name="app_name">Jalali Calendar</string>
+    <string name="notif_channel_desc">Alerts before your events start</string>
+    <string name="notif_channel_name">Event reminders</string>
+    <string name="reminder">Reminder</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <style name="Theme.JalaliCalendar" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.JalaliCalendar.Main</item>
+    </style>
+    <style name="Theme.JalaliCalendar.Main" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

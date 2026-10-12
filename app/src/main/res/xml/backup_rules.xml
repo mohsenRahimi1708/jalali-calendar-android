@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- OAuth tokens live in EncryptedSharedPreferences; exclude them from cloud backup. -->
+    <exclude domain="sharedpref" path="auth_secure.xml" />
+</full-backup-content>

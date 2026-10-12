@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.jalicalendar.core.time.RecurrenceExpanderTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-12T03:01:26" hostname="freestyle-vm" time="0.371">
+  <properties/>
+  <testcase name="DTSTART not matching the rule still yields the saved event first" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.171"/>
+  <testcase name="Tehran DST keeps wall-clock time and shifts UTC offset" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.004"/>
+  <testcase name="invalid rule yields DTSTART only" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.002"/>
+  <testcase name="exdate removes and rdate adds occurrences" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.012"/>
+  <testcase name="matches python-dateutil for all generated cases" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.089"/>
+  <testcase name="unparseable rule degrades to a single occurrence" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.002"/>
+  <testcase name="non-recurring event yields itself only" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.001"/>
+  <testcase name="results are limited to the requested range" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.004"/>
+  <testcase name="Berlin spring-forward gap shifts the nonexistent local time forward" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.003"/>
+  <testcase name="count is consumed from DTSTART even when the range starts later" classname="com.example.jalicalendar.core.time.RecurrenceExpanderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

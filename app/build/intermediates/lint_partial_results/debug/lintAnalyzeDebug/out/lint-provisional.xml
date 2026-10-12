@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.3" type="conditional_incidents">
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/jalicalendar/reminders/NotificationHelper.kt"
+            line="74"
+            column="9"
+            startOffset="2971"
+            endLine="74"
+            endColumn="103"
+            endOffset="3065"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 34">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+                startOffset="1139"
+                endOffset="1159"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="23"
+            column="9"
+            startOffset="1139"
+            endLine="23"
+            endColumn="29"
+            endOffset="1159"/>
+        <map>
+            <condition minGE="fffffffe00000000"/>
+        </map>
+    </incident>
+
+</incidents>

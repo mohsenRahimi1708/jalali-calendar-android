@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.jalicalendar.core.time.TimeUtilsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-12T03:01:27" hostname="freestyle-vm" time="0.002">
+  <properties/>
+  <testcase name="local day boundaries respect the zone offset" classname="com.example.jalicalendar.core.time.TimeUtilsTest" time="0.0"/>
+  <testcase name="jalali date bridging stays consistent with jdatetime anchors" classname="com.example.jalicalendar.core.time.TimeUtilsTest" time="0.001"/>
+  <testcase name="zone offsets capture historical DST in Tehran" classname="com.example.jalicalendar.core.time.TimeUtilsTest" time="0.0"/>
+  <testcase name="all-day anchors are utc midnight and span exactly one day" classname="com.example.jalicalendar.core.time.TimeUtilsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
