@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">تقویم جلالی</string>
-    <string name="notif_channel_desc">هشدار پیش از شروع رویدادهای شما</string>
-    <string name="notif_channel_name">یادآوری رویدادها</string>
-    <string name="reminder">یادآوری</string>
-    <string name="today">امروز</string>
-    <string name="tomorrow">فردا</string>
-</resources>

@@ -16,3 +16,7 @@ app/release/
 # Kotlin incremental caches + scratch build logs
 .kotlin/
 *.log
+
+# Build outputs (any module) + packaged artifacts
+build/
+artifacts/
