@@ -12,3 +12,7 @@ local.properties
 app/release/
 *.apk
 *.aab
+
+# Kotlin incremental caches + scratch build logs
+.kotlin/
+*.log
