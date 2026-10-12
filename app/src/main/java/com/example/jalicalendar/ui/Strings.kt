@@ -30,6 +30,7 @@ data class Strings(
     val startTime: String, val endTime: String, val repeat: String, val reminder: String,
     val save: String, val delete: String, val cancel: String,
     val titleRequired: String, val endAfterStart: String, val eventSaved: String, val eventDeleted: String,
+    val noCalendar: String,
     // Repeat / reminder presets
     val repeatNone: String, val repeatDaily: String, val repeatWeekly: String,
     val repeatMonthly: String, val repeatYearly: String,
@@ -67,6 +68,7 @@ val faStrings = Strings(
     startTime = "ساعت شروع", endTime = "ساعت پایان", repeat = "تکرار", reminder = "یادآوری",
     save = "ذخیره", delete = "حذف", cancel = "انصراف",
     titleRequired = "عنوان الزامی است", endAfterStart = "پایان باید بعد از شروع باشد",
+    noCalendar = "تقویمی برای ذخیره وجود ندارد",
     eventSaved = "رویداد ذخیره شد", eventDeleted = "رویداد حذف شد",
     repeatNone = "بدون تکرار", repeatDaily = "روزانه", repeatWeekly = "هفتگی",
     repeatMonthly = "ماهانه", repeatYearly = "سالانه",
@@ -102,6 +104,7 @@ val enStrings = Strings(
     startTime = "Start time", endTime = "End time", repeat = "Repeat", reminder = "Reminder",
     save = "Save", delete = "Delete", cancel = "Cancel",
     titleRequired = "Title is required", endAfterStart = "End must be after start",
+    noCalendar = "No calendar available to save into",
     eventSaved = "Event saved", eventDeleted = "Event deleted",
     repeatNone = "Does not repeat", repeatDaily = "Daily", repeatWeekly = "Weekly",
     repeatMonthly = "Monthly", repeatYearly = "Yearly",

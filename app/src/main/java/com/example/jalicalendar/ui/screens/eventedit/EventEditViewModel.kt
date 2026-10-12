@@ -14,6 +14,7 @@ import com.example.jalicalendar.domain.repo.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
@@ -51,7 +52,7 @@ data class EventEditState(
 class EventEditViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val eventRepo: EventRepository,
-    calendarRepo: CalendarRepository,
+    private val calendarRepo: CalendarRepository,
     settingsRepo: SettingsRepository,
     private val reminderScheduler: com.example.jalicalendar.reminders.ReminderScheduler,
 ) : ViewModel() {
@@ -110,6 +111,13 @@ class EventEditViewModel @Inject constructor(
                     }
                 }
                 val isAllDay = presetAllDayDate != null
+                // Fresh installs have no calendars at all (the Local calendar is not
+                // guaranteed to exist yet), so seed one before deriving the id —
+                // otherwise calendarId stays blank and save() fails downstream.
+                val localId = calendarRepo.seedLocalCalendar()
+                val storedDefault = settings.value.defaultCalendarId
+                val chosen = storedDefault
+                    ?.takeIf { id -> calendarRepo.observeCalendars().first().any { it.id == id } }
                 _state.update {
                     it.copy(
                         loading = false,
@@ -117,9 +125,7 @@ class EventEditViewModel @Inject constructor(
                         startMillis = start,
                         endMillis = if (isAllDay) start + 86_400_000L else start + 3_600_000L,
                         allDay = isAllDay,
-                        calendarId = settings.value.defaultCalendarId
-                            ?: calendars.value.firstOrNull { c -> c.type == Calendar.TYPE_CALENDAR }?.id
-                                .orEmpty(),
+                        calendarId = chosen ?: localId,
                     )
                 }
             }
@@ -191,15 +197,17 @@ class EventEditViewModel @Inject constructor(
             s.title.isBlank() -> { _state.update { it.copy(error = "title") }; return }
             s.endMillis <= s.startMillis -> { _state.update { it.copy(error = "end") }; return }
         }
-        val calendarId = s.calendarId.ifBlank {
-            calendars.value.firstOrNull { c -> c.type == Calendar.TYPE_CALENDAR }?.id.orEmpty()
-        }
-        if (calendarId.isBlank()) {
-            _state.update { it.copy(error = "title") }
-            return
-        }
-
         viewModelScope.launch {
+            // Resolve a valid target calendar: the chosen id (if it still exists) →
+            // any calendar-type row → seed the Local calendar. A calendar problem
+            // must never be reported as "Title is required".
+            val calendarId = s.calendarId.takeIf { id -> calendars.value.any { it.id == id } }
+                ?: calendars.value.firstOrNull { c -> c.type == Calendar.TYPE_CALENDAR }?.id
+                ?: runCatching { calendarRepo.seedLocalCalendar() }.getOrNull()
+            if (calendarId.isNullOrBlank()) {
+                _state.update { it.copy(error = "calendar") }
+                return@launch
+            }
             val endMillis = if (s.allDay && s.endMillis <= s.startMillis) {
                 s.startMillis + 86_400_000L
             } else {

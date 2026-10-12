@@ -140,6 +140,11 @@ fun EventEditScreen(navController: NavHostController, eventId: String?) {
                 },
             )
 
+            if (state.error == "calendar") {
+                Text(strings.noCalendar, color = MaterialTheme.colorScheme.error,
+                    style = MaterialTheme.typography.bodySmall)
+            }
+
             // All-day switch
             Row(
                 Modifier.fillMaxWidth(),
